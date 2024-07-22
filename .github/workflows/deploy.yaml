@@ -1,4 +1,4 @@
-name: 'Deploy'
+name: "Deploy"
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     paths-ignore:
       - README.md
       - LICENCE
-      - gitignore
+      - .gitignore
 
   jobs:
     deploy:
@@ -32,11 +32,11 @@ on:
             server: $({ secrets.DEPLOY_IP })
             username: $({ secrets.DEPLOY_USER })
             password: $({ secrets.DEPLOY_PASSWORD })
-            local_path: './output/*'
-            remote_path: '/tmp/website'
+            local_path: "./output/*"
+            remote_path: "/tmp/website"
             sftp_only: true
 
-        - name: launch remote 
+        - name: launch remote
           uses: appleboy/ssh-action@master
           with:
             ip: $({ secrets.DEPLOY_IP })
