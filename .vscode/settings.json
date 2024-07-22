@@ -21,5 +21,8 @@
         "className",
         "ngClass",
         "ui"
-    ]
+    ],
+    "yaml.schemas": {
+        "https://json.schemastore.org/github-action.json": "file:///e%3A/code/blog/.github/deploy.yml"
+    }
 }
