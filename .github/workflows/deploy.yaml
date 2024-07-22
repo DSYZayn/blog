@@ -26,26 +26,21 @@ jobs:
         uses: tailscale/github-action@v2
         with:
           authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
-      - name: upload file to remote
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-        with:
-          server: ${{ secrets.DEPLOY_IP }}
-          username: ${{ secrets.DEPLOY_USER }}
-          password: ${{ secrets.DEPLOY_PASSWORD }}
-          local_path: "./output/*"
-          remote_path: "/tmp/website"
-          sftp_only: true
 
-      - name: launch remote
-        uses: appleboy/ssh-action@master
+      - name: launch remote and deploy
+        uses: cross-the-world/ssh-scp-ssh-pipelines@latest
         with:
           host: ${{ secrets.DEPLOY_IP }}
-          username: ${{ secrets.DEPLOY_USER }}
-          password: ${{ secrets.DEPLOY_PASSWORD }}
-          script: |
+          user: ${{ secrets.DEPLOY_USER }}
+          pass: ${{ secrets.DEPLOY_PASSWORD }}
+          connect_timeout: 10s
+          first_ssh: |
             cd 
             rm -rf ./website/*
-            mv /tmp/website/* ./website/
-            rm -rf /tmp/website/*
+          scp: |
+            './output/*' => /home/zayn/website/
+          last_ssh: |
+            echo 'restart docker'
             sudo docker restart v18
-            exit
+            ls -la
+
