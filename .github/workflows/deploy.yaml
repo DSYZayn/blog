@@ -23,9 +23,14 @@ jobs:
         run: |
           yarn install
           yarn build
-          rm -rf /home/zayn/website/*
-          mv ./.output/* /home/zayn/website/
-          echo 'restart docker'
+
+      - name: clean old files
+        run: rm -rf /home/zayn/website/*
+
+      - name: move new files to website directory
+        run: mv ./.output/* /home/zayn/website/
+
+      - name: restart docker pod
+        run: |
           sudo docker restart v18
           ls -la
-
