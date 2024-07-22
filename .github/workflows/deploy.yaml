@@ -23,25 +23,9 @@ jobs:
         run: |
           yarn install
           yarn build
-      - name: Tailscale
-        uses: tailscale/github-action@v2
-        with:
-          authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
-
-      - name: launch remote and deploy
-        uses: cross-the-world/ssh-scp-ssh-pipelines@latest
-        with:
-          host: ${{ secrets.DEPLOY_IP }}
-          user: ${{ secrets.DEPLOY_USER }}
-          pass: ${{ secrets.DEPLOY_PASSWORD }}
-          connect_timeout: 10s
-          first_ssh: |
-            cd /home/zayn
-            rm -rf ./website/*
-          scp: |
-            ./.output/* => /home/zayn/website/
-          last_ssh: |
-            echo 'restart docker'
-            sudo docker restart v18
-            ls -la
+          rm -rf /home/zayn/website/*
+          mv ./.output/* /home/zayn/website/
+          echo 'restart docker'
+          sudo docker restart v18
+          ls -la
 
