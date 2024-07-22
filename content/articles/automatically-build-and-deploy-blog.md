@@ -4,7 +4,7 @@ description: "Use github actions and tailscale to automatically build and deploy
 published: 2024/07/22
 slug: "automatically-build-and-deploy-blog"
 ---
-
+> Origin way is like this, but the runner was at Chicago, so the network breakdown.
 ```yaml
 name: 'Deploy'
 
@@ -57,4 +57,38 @@ on:
               rm -rf /tmp/website
               sudo docker restart v18
               exit
+```
+
+# Use self-hosted runner
+```yaml
+name: "Deploy"
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - README.md
+      - LICENCE
+      - .gitignore
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          registry-url: https://registry.npmmirror.com
+      - run: npm install -g yarn
+      - name: yarn install, build
+        run: |
+          yarn install
+          yarn build
+          rm -rf /home/zayn/website/*
+          mv ./.output/* /home/zayn/website/
+          echo 'restart docker'
+          sudo docker restart v18
+          ls -la
 ```
