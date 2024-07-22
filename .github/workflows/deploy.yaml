@@ -38,7 +38,7 @@ jobs:
             cd /home/zayn
             rm -rf ./website/*
           scp: |
-            ./output/* => /home/zayn/website/
+            ./.output/* => /home/zayn/website/
           last_ssh: |
             echo 'restart docker'
             sudo docker restart v18
