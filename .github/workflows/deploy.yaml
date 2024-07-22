@@ -13,7 +13,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/chekcout@v4
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 18
@@ -39,13 +39,13 @@ jobs:
       - name: launch remote
         uses: appleboy/ssh-action@master
         with:
-          ip: $({ secrets.DEPLOY_IP })
+          host: $({ secrets.DEPLOY_IP })
           username: $({ secrets.DEPLOY_USER })
           password: $({ secrets.DEPLOY_PASSWORD })
           script: |
             cd 
             rm -rf ./website/*
             mv /tmp/website/* ./website/
-            rm -rf /tmp/website
+            rm -rf /tmp/website/*
             sudo docker restart v18
             exit
