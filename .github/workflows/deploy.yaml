@@ -25,13 +25,13 @@ jobs:
       - name: Tailscale
         uses: tailscale/github-action@v2
         with:
-          authkey: $({ secrets.TAILSCALE_AUTHKEY })
+          authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
       - name: upload file to remote
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: $({ secrets.DEPLOY_IP })
-          username: $({ secrets.DEPLOY_USER })
-          password: $({ secrets.DEPLOY_PASSWORD })
+          server: ${{ secrets.DEPLOY_IP }}
+          username: ${{ secrets.DEPLOY_USER }}
+          password: ${{ secrets.DEPLOY_PASSWORD }}
           local_path: "./output/*"
           remote_path: "/tmp/website"
           sftp_only: true
@@ -39,9 +39,9 @@ jobs:
       - name: launch remote
         uses: appleboy/ssh-action@master
         with:
-          host: $({ secrets.DEPLOY_IP })
-          username: $({ secrets.DEPLOY_USER })
-          password: $({ secrets.DEPLOY_PASSWORD })
+          host: ${{ secrets.DEPLOY_IP }}
+          username: ${{ secrets.DEPLOY_USER }}
+          password: ${{ secrets.DEPLOY_PASSWORD }}
           script: |
             cd 
             rm -rf ./website/*
