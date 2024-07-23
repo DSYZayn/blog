@@ -25,6 +25,7 @@
     "@nuxt/image": "1.1.0",
     "@nuxt/ui": "2.11.1",
     "package.json": "^2.0.1",
+    "translate.js": "^1.3.2",
     "vue-use-fixed-header": "^2.0.0"
   }
 }

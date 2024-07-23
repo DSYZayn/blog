@@ -1381,7 +1381,7 @@
 
 "@nuxtjs/mdc@^0.8.3":
   version "0.8.3"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/mdc/-/mdc-0.8.3.tgz#4648b76901bdb9d8bc2080103ed5a5063a3459f3"
+  resolved "https://registry.npmmirror.com/@nuxtjs/mdc/-/mdc-0.8.3.tgz#4648b76901bdb9d8bc2080103ed5a5063a3459f3"
   integrity sha512-FqvJFWkBN9u2FeWog+7+C0aIOx0WIu61TYgAXPmmIOVVua6s2mXQsMyF3fXY2M56QBIaYJzK/SYN+5FGr5GNTQ==
   dependencies:
     "@nuxt/kit" "^3.12.2"
@@ -8126,6 +8126,11 @@ tr46@~0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
   integrity sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==
+
+translate.js@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.npmmirror.com/translate.js/-/translate.js-1.3.2.tgz#73ec3a966867e9b0a06156b94c7e8833defe14a2"
+  integrity sha512-9jkppRMS5fiVqbaq57kQGnafGyjnCGCf3uBHLUN2OrCJJcCEIkgwqsTQHnTH7nCCUeqYyoQ59VagVi03qgKRFA==
 
 trim-lines@^3.0.0:
   version "3.0.1"

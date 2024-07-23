@@ -5,6 +5,7 @@ published: 2024/07/22
 slug: "automatically-build-and-deploy-blog"
 ---
 > Origin way is like this, but the runner was at Chicago, so the network breakdown.
+
 ```yaml
 name: 'Deploy'
 

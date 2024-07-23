@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/content",
     "@nuxthq/studio",
-    "@vueuse/nuxt"
+    "@vueuse/nuxt",
   ],
 
   ui: {
@@ -35,10 +35,25 @@ export default defineNuxtConfig({
 
   content: {
     highlight: {
-      theme: "github-dark",
+      theme:'vitesse-light',
     },
+    markdown:{
+      mdc:true,
+    }
   },
-
+  mdc:{
+    highlight:{
+      langs:[
+        'mermaid',
+        'python',
+        'js',
+        'ts',
+        'vue',
+        'html',
+        'shell'
+      ]
+    }
+  },
   googleFonts: {
     display: "swap",
     families: {
