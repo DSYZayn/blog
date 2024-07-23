@@ -10,7 +10,11 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxthq/studio",
     "@vueuse/nuxt",
+    "@nuxtjs/sitemap"
   ],
+  site: {
+    url: 'https://blog.dongsy.com.cn'
+  },
 
   ui: {
     icons: ["heroicons", "lucide"],
@@ -59,6 +63,11 @@ export default defineNuxtConfig({
     families: {
       Inter: [400, 500, 600, 700, 800, 900],
     },
+  },
+  build:{
+    analyze: {
+      filename: "stats.html"
+    }
   },
 
   compatibilityDate: "2024-07-22",

@@ -19,18 +19,16 @@ jobs:
           node-version: 18
           registry-url: https://registry.npmmirror.com
       - run: npm install -g yarn
-      - name: yarn install, build
-        run: |
-          yarn install
-          yarn build
+
+      - name: yarn install 
+        run: yarn install
+
+      - name: yarn build
+        run: yarn generate
 
       - name: clean old files
-        run: rm -rf /home/zayn/website/*
+        run: rm -rf /opt/1panel/apps/openresty/openresty/www/sites/zayn_blog/index/*
 
       - name: move new files to website directory
-        run: mv ./.output/* /home/zayn/website/
+        run: mv ./.output/public/* /opt/1panel/apps/openresty/openresty/www/sites/zayn_blog/index/
 
-      - name: restart docker pod
-        run: |
-          sudo docker restart v18
-          ls -la
