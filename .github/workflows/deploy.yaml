@@ -13,7 +13,10 @@ jobs:
   deploy:
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v4
+      - name: manual check output
+        run: | 
+          cd /tmp/blog
+          git pull
       - uses: actions/setup-node@v4
         with:
           node-version: 18
@@ -25,7 +28,6 @@ jobs:
           yarn install
           npx nuxi@latest module add sitemap
 
-
       - name: yarn build
         run: yarn generate
 
@@ -34,4 +36,5 @@ jobs:
 
       - name: move new files to website directory
         run: mv ./.output/public/* /opt/1panel/apps/openresty/openresty/www/sites/zayn_blog/index/
+      
 
