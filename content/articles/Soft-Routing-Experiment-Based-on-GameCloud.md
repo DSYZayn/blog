@@ -2,7 +2,7 @@
 title: 基于玩客云的软路由实验
 description: 基于玩客云的软路由实验
 published: 2024/01/25
-slug: 基于玩客云的软路由实验
+slug: "soft-routing-experiment-based-on-gamecloud"
 ---
 > 前言：结合前期实验室的软路由需求，需要有一个独立设备用于播发Tailscale子网流量，发现软路由非常适合这样的需求，但由于传统软路由价格较高，所以想到使用玩客云这款已经退市的设备刷上openwrt系统来实现我的想法。
 

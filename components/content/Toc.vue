@@ -4,6 +4,7 @@ import { type item } from '~/types/TocItem';
 const props = defineProps<{
   items: Ref<item>[];
 }>();
+
 </script>
 
 <template>

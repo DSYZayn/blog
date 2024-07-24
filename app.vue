@@ -1,16 +1,13 @@
-<script setup>
-
-
-</script>
+<script setup></script>
 <template>
-  <NuxtLoadingIndicator color="#14b8a6" />
-  <AppNavbar />
-  <div class="h-32"></div>
-  <UContainer id="page" class="relative">
-    <NuxtPage />
-  </UContainer>
-  <div class="h-32"></div>
-  <AppFooter />
+    <NuxtLoadingIndicator color="#14b8a6" />
+    <AppNavbar />
+    <div class="h-32"></div>
+    <UContainer id="page" class="relative">
+      <NuxtPage />
+    </UContainer>
+    <div class="h-32"></div>
+    <AppFooter />
 </template>
 
 <style>

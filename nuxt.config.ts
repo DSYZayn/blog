@@ -26,6 +26,7 @@ export default defineNuxtConfig({
   site: {
     url: 'https://blog.dongsy.com.cn'
   },
+  
   css:['./assets/main.css'],
 
   ui: {
