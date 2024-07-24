@@ -21,7 +21,10 @@ jobs:
       - run: npm install -g yarn
 
       - name: yarn install 
-        run: yarn install
+        run: |
+          yarn install
+          npx nuxi@latest module add sitemap
+
 
       - name: yarn build
         run: yarn generate

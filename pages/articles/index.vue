@@ -6,10 +6,13 @@
         <AppArticleCard :article="article" />
       </li>
     </ul>
+    <div class="rc fixed top-32 right-64">
+      <AppRCalendar />
+    </div>
   </main>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const description =
   "All of my long-form thoughts on programming, user interfaces, product design, and more, collected in chronological order.";
 useSeoMeta({

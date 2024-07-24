@@ -12,12 +12,17 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@nuxtjs/google-fonts",
     "@nuxtjs/fontaine",
+    "@nuxtjs/tailwindcss",
     "@nuxt/image",
     "@nuxt/content",
     "@nuxthq/studio",
     "@vueuse/nuxt",
-    "@nuxtjs/sitemap"
+    "shadcn-nuxt"
   ],
+  shadcn:{
+    prefix: '',
+    componentDir: './components/ui'
+  },
   colorMode:{
     preference:'light',
     dataValue: 'theme',
@@ -27,7 +32,7 @@ export default defineNuxtConfig({
     url: 'https://blog.dongsy.com.cn'
   },
   
-  css:['./assets/main.css'],
+  css:['./assets/main.css','./assets/tailwind.css'],
 
   ui: {
     icons: ["heroicons", "lucide"],

@@ -11,8 +11,10 @@
       </ContentDoc>
     </div>
   </main>
-  <div class="fixed toc top-24 -right-52 -translate-x-full" ref="toc">
+  <div class="invisible md:visible fixed toc top-36 right-3" ref="toc">
     <Toc v-if="isTocShow" :items="TocItems"></Toc>
+    <AppZGiscus />
+ 
   </div>
 </template>
 <script setup lang="ts">
@@ -21,14 +23,16 @@ import { type item } from "~/types/TocItem";
 const route = useRoute();
 const isTocShow = ref<boolean>(false);
 
+
 useSeoMeta({
   twitterCard: "summary_large_image",
   articleAuthor: ["Zayn"],
 });
+
+const TocItems = ref<Ref<item>[]>([]);
 const { data: page } = await useAsyncData(route.path, () =>
   queryContent(route.path).findOne()
 );
-const TocItems = ref<Ref<item>[]>([]);
 
 function getTocItems(link: TocLink): Ref<item> {
   const ac = ref<boolean>(false);
@@ -41,7 +45,7 @@ function getTocItems(link: TocLink): Ref<item> {
       return (ac.value = false);
     },
     {
-      immediate:true
+      immediate: true,
     }
   );
 
@@ -64,8 +68,10 @@ function getTocItems(link: TocLink): Ref<item> {
 }
 onBeforeMount(async () => {
   TocItems.value = page.value?.body?.toc?.links.map((link) => {
+    if (link.id === undefined) return [];
     return getTocItems(link);
   }) as Ref<item>[];
+  if (TocItems.value.length === 0) return;
   isTocShow.value = true;
 });
 </script>

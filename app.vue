@@ -1,10 +1,16 @@
-<script setup></script>
+<script setup>
+if(!import.meta.env.SSR){
+  const nuxtApp = useNuxtApp()
+  nuxtApp.provide('baseurl', window.location.origin)
+}
+
+</script>
 <template>
     <NuxtLoadingIndicator color="#14b8a6" />
     <AppNavbar />
     <div class="h-32"></div>
     <UContainer id="page" class="relative">
-      <NuxtPage />
+      <NuxtPage :page-key="$route.path"/>
     </UContainer>
     <div class="h-32"></div>
     <AppFooter />
