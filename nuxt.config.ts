@@ -1,5 +1,11 @@
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
 
   modules: [
     "@nuxt/ui",
@@ -12,9 +18,15 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxtjs/sitemap"
   ],
+  colorMode:{
+    preference:'light',
+    dataValue: 'theme',
+    classSuffix: ''
+  },
   site: {
     url: 'https://blog.dongsy.com.cn'
   },
+  css:['./assets/main.css'],
 
   ui: {
     icons: ["heroicons", "lucide"],
@@ -34,7 +46,13 @@ export default defineNuxtConfig({
       bodyAttrs: {
         class: "antialiased bg-gray-50 dark:bg-black min-h-screen",
       },
+      script:[
+        // local JS
+        {src:'/translate.js'},
+        {src:'https://cdn.staticfile.net/translate.js/3.5.1/translate.js'}
+      ]
     },
+    
   },
 
   content: {

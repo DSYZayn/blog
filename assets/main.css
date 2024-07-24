@@ -1,0 +1,42 @@
+.translateSelectLanguage{
+    @apply select select-bordered absolute right-1/4 -translate-x-full top-5 w-28 h-10 scale-75 z-50;
+}
+
+/*css主要部分的样式*/
+/*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+
+*::-webkit-scrollbar {
+  width: 10px !important; /*对垂直流动条有效*/
+  height: 10px !important; /*对水平流动条有效*/
+}
+* {
+  scrollbar-width: auto;
+  scrollbar-color: auto;
+}
+*:hover {
+  scrollbar-width: auto;
+  scrollbar-color: auto;
+}
+
+/*定义滚动条的轨道颜色、内阴影及圆角*/
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
+  border-radius: 3px !important;
+}
+
+/*定义滑块颜色、内阴影及圆角*/
+*::-webkit-scrollbar-thumb {
+  border-radius: 7px !important;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
+  background-color: #e8e8e8 !important;
+}
+
+/*定义两端按钮的样式*/
+*::-webkit-scrollbar-button {
+  display: none !important;
+}
+
+/*定义右下角汇合处的样式*/
+*::-webkit-scrollbar-corner {
+  display: none !important;
+}
