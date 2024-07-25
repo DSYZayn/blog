@@ -16,7 +16,7 @@ jobs:
       - name: manual check output
         run: | 
           cd /tmp/blog
-          git pull
+          git pull origin main
       - uses: actions/setup-node@v4
         with:
           node-version: 18
@@ -24,9 +24,7 @@ jobs:
       - run: npm install -g yarn
 
       - name: yarn install 
-        run: |
-          yarn install
-          npx nuxi@latest module add sitemap
+        run: yarn install
 
       - name: yarn build
         run: yarn generate

@@ -17,7 +17,8 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxthq/studio",
     "@vueuse/nuxt",
-    "shadcn-nuxt"
+    "shadcn-nuxt",
+    "@nuxtjs/sitemap"
   ],
   shadcn:{
     prefix: '',
