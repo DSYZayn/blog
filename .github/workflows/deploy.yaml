@@ -34,6 +34,9 @@ jobs:
       - name: move new files to website directory
         run: mv ./.output/* /home/zayn/website/
 
+      - name: change owner
+        run: chown -R zayn:zayn /home/zayn/website
+
       - name: restart docker pod
         run: sudo docker restart z_blog
       
