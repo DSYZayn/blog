@@ -16,7 +16,9 @@ jobs:
       - name: manual check output
         run: | 
           cd /tmp/blog
-          git pull origin main
+          git fetch --all
+          git reset --hard origin/main
+          git pull
       - uses: actions/setup-node@v4
         with:
           node-version: 18
