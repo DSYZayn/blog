@@ -14,33 +14,34 @@ export default defineNuxtConfig({
     "@nuxtjs/fontaine",
     "@nuxtjs/tailwindcss",
     "@nuxt/image",
+    "nuxt-content-twoslash",
     "@nuxt/content",
     "@nuxthq/studio",
     "@vueuse/nuxt",
     "shadcn-nuxt",
-    "@nuxtjs/sitemap"
+    "@nuxtjs/sitemap",
   ],
-  shadcn:{
+  shadcn: {
     prefix: '',
     componentDir: './components/ui'
   },
-  colorMode:{
-    preference:'light',
+  colorMode: {
+    preference: 'light',
     dataValue: 'theme',
     classSuffix: ''
   },
   site: {
     url: 'https://blog.dongsy.com.cn'
   },
-  
-  css:['./assets/main.css','./assets/tailwind.css'],
+
+  css: ['./assets/main.css', './assets/tailwind.css'],
 
   ui: {
     icons: ["heroicons", "lucide"],
   },
 
-  tailwindcss:{
-    viewer:false
+  tailwindcss: {
+    viewer: false
   },
 
   app: {
@@ -53,43 +54,52 @@ export default defineNuxtConfig({
       bodyAttrs: {
         class: "antialiased bg-gray-50 dark:bg-black min-h-screen",
       },
-      script:[
+      script: [
         // local JS
-        {src:'/translate.js'},
-        {src:'https://cdn.staticfile.net/translate.js/3.5.1/translate.js'}
+        { src: '/translate.js' },
+        { src: 'https://cdn.staticfile.net/translate.js/3.5.1/translate.js' }
       ]
     },
-    
+
   },
 
   content: {
     highlight: {
-      theme:'vitesse-light',
+      theme: 'vitesse-light',
+      langs: [
+        'python',
+        'bash',
+        'powershell',
+        'vue',
+        'vue-html',
+        'r',
+        'shell',
+        'mermaid', 'js', 'jsx', 'json', 'ts', 'tsx', 'css', 'html', 'md', 'mdc', 'yaml'
+      ]
     },
-    markdown:{
-      mdc:true,
-    }
   },
   mdc:{
     highlight:{
       langs:[
-        'mermaid',
         'python',
-        'js',
-        'ts',
+        'bash',
+        'powershell',
         'vue',
-        'html',
-        'shell'
+        'vue-html',
+        'r',
+        'shell',
+        'mermaid', 'js', 'jsx', 'json', 'ts', 'tsx', 'css', 'html', 'md', 'mdc', 'yaml'
       ]
     }
   },
+
   googleFonts: {
     display: "swap",
     families: {
       Inter: [400, 500, 600, 700, 800, 900],
     },
   },
-  build:{
+  build: {
     analyze: {
       filename: "stats.html"
     }

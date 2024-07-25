@@ -32,6 +32,7 @@
     "clsx": "^2.1.1",
     "daisyui": "^4.12.10",
     "lucide-vue-next": "^0.414.0",
+    "nuxt-content-twoslash": "^0.1.0",
     "package.json": "^2.0.1",
     "radix-vue": "^1.9.2",
     "tailwind-merge": "^2.4.0",

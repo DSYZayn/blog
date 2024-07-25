@@ -13,12 +13,9 @@ jobs:
   deploy:
     runs-on: self-hosted
     steps:
-      - name: manual check output
-        run: | 
-          cd /tmp/blog
-          git fetch --all
-          git reset --hard origin/main
-          git pull
+      - uses: actions/checkout@v4
+        with:
+          github-server-url: 'https://kkgithub.com'
       - uses: actions/setup-node@v4
         with:
           node-version: 18
