@@ -32,9 +32,12 @@ jobs:
         run: yarn generate
 
       - name: clean old files
-        run: rm -rf /opt/1panel/apps/openresty/openresty/www/sites/zayn_blog/index/*
+        run: rm -rf /home/zayn/website/*
 
       - name: move new files to website directory
-        run: mv ./.output/public/* /opt/1panel/apps/openresty/openresty/www/sites/zayn_blog/index/
+        run: mv ./.output/public/* /home/zayn/website/*
+
+      - name: restart docker pod
+        run: sudo docker restart z_blog
       
 
