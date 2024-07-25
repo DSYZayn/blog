@@ -78,9 +78,9 @@ export default defineNuxtConfig({
       ]
     },
   },
-  mdc:{
-    highlight:{
-      langs:[
+  mdc: {
+    highlight: {
+      langs: [
         'python',
         'bash',
         'powershell',
@@ -102,6 +102,11 @@ export default defineNuxtConfig({
   build: {
     analyze: {
       filename: "stats.html"
+    }
+  },
+  router: {
+    options:{
+      scrollBehaviorType:'smooth'
     }
   },
 

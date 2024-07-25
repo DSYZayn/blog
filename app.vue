@@ -1,4 +1,5 @@
 <script setup>
+const route = useRoute()
 if(!import.meta.env.SSR){
   const nuxtApp = useNuxtApp()
   nuxtApp.provide('baseurl', window.location.origin)
@@ -10,7 +11,7 @@ if(!import.meta.env.SSR){
     <AppNavbar />
     <div class="h-32"></div>
     <UContainer id="page" class="relative">
-      <NuxtPage :page-key="$route.path"/>
+      <NuxtPage :page-key="route => route.path"/>
     </UContainer>
     <div class="h-32"></div>
     <AppFooter />

@@ -1,18 +1,29 @@
 <script setup lang="ts">
 import { type item } from '~/types/TocItem';
 const props = defineProps<{
-  items: Ref<item>[];
+    items: Ref<item>[]
 }>();
 
 </script>
 
 <template>
     <li v-for="(item,idx) in props.items" :key="idx">
-        <a v-if="item.value.child.length === 0" :class="{active: item.value.active}" :href="item.value.link">{{ item.value.title }}</a>
+        <NuxtLink v-if="item.value.child.length === 0" :class="{active: item.value.active}" 
+        :to="{
+            path:props.path,
+            hash:item.value.link
+        }"
+        exact
+        >{{ item.value.title }}</NuxtLink>
         <li v-else>
             <details>
             <summary>
-                <a :class="{active: item.value.active}" :href="item.value.link">{{ item.value.title }}</a>
+                <NuxtLink :class="{active: item.value.active}" 
+                :to="{
+                    hash:item.value.link
+                }"
+                exact
+                >{{ item.value.title }}</NuxtLink>
             </summary>
             <ul>
                 <TocItem :items="item.value.child"></TocItem>
