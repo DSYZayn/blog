@@ -26,7 +26,7 @@ jobs:
         run: yarn install
 
       - name: yarn build
-        run: yarn build
+        run: yarn generate
 
       - name: clean old files
         run: rm -rf /opt/1panel/apps/openresty/openresty/www/sites/zblog/index/*
