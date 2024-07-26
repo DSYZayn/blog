@@ -33,6 +33,7 @@
     "nuxt-content-twoslash": "^0.1.0",
     "package.json": "^2.0.1",
     "tailwindcss-animate": "^1.0.7",
-    "vue-use-fixed-header": "^2.0.0"
+    "vue-use-fixed-header": "^2.0.0",
+    "vue3-audio-player": "^1.0.7"
   }
 }
