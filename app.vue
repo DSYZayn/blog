@@ -1,19 +1,26 @@
-<script setup>
+<script setup lang="ts">
 // if(!import.meta.env.SSR){
 //   const nuxtApp = useNuxtApp()
 //   nuxtApp.provide('baseurl', window.location.origin)
 // }
 
+const isArticlePage = useArticle();
+
+
 </script>
 <template>
-    <NuxtLoadingIndicator color="#14b8a6" />
-    <AppNavbar />
-    <div class="h-32"></div>
-    <UContainer id="page" class="relative">
-      <NuxtPage :page-key="route => route.path"/>
-    </UContainer>
-    <div class="h-32"></div>
-    <AppFooter />
+  <NuxtLoadingIndicator color="#14b8a6" />
+  <AppNavbar />
+  <div class="h-32"></div>
+  <UContainer
+    id="page"
+    class="relative"
+    :class="{ 'ml-0 xl:mx-auto': isArticlePage }"
+  >
+    <NuxtPage :page-key="(route) => route.path" />
+  </UContainer>
+  <div class="h-32"></div>
+  <AppFooter />
 </template>
 
 <style>

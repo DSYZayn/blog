@@ -129,4 +129,7 @@ module.exports = {
     },
   },
   plugins: [typography, animate, daisyui],
+  daisyui: {
+    themes: false // Only use light and dark
+  }
 } satisfies Config

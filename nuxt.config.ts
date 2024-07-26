@@ -6,7 +6,6 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-
   modules: [
     "@nuxt/ui",
     "nuxt-icon",
@@ -42,15 +41,13 @@ export default defineNuxtConfig({
     pageTransition: { name: "page", mode: "out-in" },
     head: {
       htmlAttrs: {
-        lang: "en",
+        lang: "zh",
         class: "h-full",
       },
       bodyAttrs: {
         class: "antialiased bg-gray-50 dark:bg-black min-h-screen",
       },
       script: [
-        // local JS
-        { src: '/translate.js' },
         { src: 'https://cdn.staticfile.net/translate.js/3.5.1/translate.js' }
       ]
     },
@@ -96,11 +93,6 @@ export default defineNuxtConfig({
   build: {
     analyze: {
       filename: "stats.html"
-    }
-  },
-  router: {
-    options:{
-      scrollBehaviorType:'smooth'
     }
   },
 

@@ -9,20 +9,26 @@
           <ContentRenderer :value="doc" />
         </article>
       </ContentDoc>
+      <div class="visible md:invisible">
+        <LazyAppZGiscus v-if="!isMdScreen"/>
+      </div>
     </div>
-    <div class="invisible md:visible fixed toc top-36 right-3" ref="toc">
-      <ClientOnly>
-        <ContentQuery :path="route.path" find="one" v-slot="{ data }">
+    <div class="fixed toc top-36 right-3" ref="toc" v-if="isMdScreen">
+      <ContentQuery :path="route.path" find="one" v-slot="{ data } ">
+        <ClientOnly>
           <Toc :page="data"></Toc>
-        </ContentQuery>
-      </ClientOnly>
+        </ClientOnly>
+      </ContentQuery>
       <AppZGiscus />
     </div>
   </main>
 </template>
 <script setup lang="ts">
+import { useMediaQuery } from '#imports';
 const route = useRoute();
 
+
+const isMdScreen = useMediaQuery('(min-width: 768px)')
 useSeoMeta({
   twitterCard: "summary_large_image",
   articleAuthor: ["Zayn"],
