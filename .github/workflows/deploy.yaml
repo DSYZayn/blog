@@ -32,7 +32,7 @@ jobs:
         run: rm -rf /opt/1panel/apps/openresty/openresty/www/sites/zblog/index/*
 
       - name: move new files to website directory
-        run: mv ./.output/* /opt/1panel/apps/openresty/openresty/www/sites/zblog/index
+        run: mv ./.output/public/* /opt/1panel/apps/openresty/openresty/www/sites/zblog/index
 
       - name: change owner
         run: chown -R zayn:zayn /opt/1panel/apps/openresty/openresty/www/sites/zblog/index
