@@ -10,13 +10,15 @@
         </article>
       </ContentDoc>
     </div>
+    <div class="invisible md:visible fixed toc top-36 right-3" ref="toc">
+      <ClientOnly>
+        <ContentQuery :path="route.path" find="one" v-slot="{ data }">
+          <Toc :page="data"></Toc>
+        </ContentQuery>
+      </ClientOnly>
+      <AppZGiscus />
+    </div>
   </main>
-  <div class="invisible md:visible fixed toc top-36 right-3" ref="toc">
-    <ContentQuery :path="route.path" find="one" v-slot="{ data }">
-      <Toc :page="data"></Toc>
-    </ContentQuery>
-    <AppZGiscus />
-  </div>
 </template>
 <script setup lang="ts">
 const route = useRoute();

@@ -1,9 +1,8 @@
 <script setup>
-const route = useRoute()
-if(!import.meta.env.SSR){
-  const nuxtApp = useNuxtApp()
-  nuxtApp.provide('baseurl', window.location.origin)
-}
+// if(!import.meta.env.SSR){
+//   const nuxtApp = useNuxtApp()
+//   nuxtApp.provide('baseurl', window.location.origin)
+// }
 
 </script>
 <template>

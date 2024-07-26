@@ -12,19 +12,13 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@nuxtjs/google-fonts",
     "@nuxtjs/fontaine",
-    "@nuxtjs/tailwindcss",
     "@nuxt/image",
     "nuxt-content-twoslash",
     "@nuxt/content",
     "@nuxthq/studio",
     "@vueuse/nuxt",
-    "shadcn-nuxt",
     "@nuxtjs/sitemap",
   ],
-  shadcn: {
-    prefix: '',
-    componentDir: './components/ui'
-  },
   colorMode: {
     preference: 'light',
     dataValue: 'theme',

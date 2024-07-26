@@ -10,7 +10,6 @@ const props = defineProps<{
     <li v-for="(item,idx) in props.items" :key="idx">
         <NuxtLink v-if="item.value.child.length === 0" :class="{active: item.value.active}" 
         :to="{
-            path:props.path,
             hash:item.value.link
         }"
         exact

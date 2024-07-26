@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { type item } from "~/types/TocItem";
+import type { TocLink } from "@nuxt/content";
 const route = useRoute();
 const props = defineProps<{
   page: any;
@@ -8,7 +9,7 @@ const TocItems = ref<Ref<item>[]>([]);
 // const { data: page } = await useAsyncData(route.path, () =>
 //   queryContent(route.path).findOne()
 // );
-TocItems.value = props.page?.body?.toc?.links.map((link) => {
+TocItems.value = props.page?.body?.toc?.links.map((link:TocLink) => {
   if (link.id === undefined) return [];
   return getTocItems(link);
 }) as Ref<item>[];

@@ -29,15 +29,13 @@ jobs:
         run: yarn build
 
       - name: clean old files
-        run: rm -rf /home/zayn/website/*
+        run: rm -rf /opt/1panel/apps/openresty/openresty/www/sites/zblog/index/*
 
       - name: move new files to website directory
-        run: mv ./.output/* /home/zayn/website/
+        run: mv ./.output/* /opt/1panel/apps/openresty/openresty/www/sites/zblog/index
 
       - name: change owner
-        run: chown -R zayn:zayn /home/zayn/website
+        run: chown -R zayn:zayn /opt/1panel/apps/openresty/openresty/www/sites/zblog/index
 
-      - name: restart docker pod
-        run: sudo docker restart z_blog
       
 
