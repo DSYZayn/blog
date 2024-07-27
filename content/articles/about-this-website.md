@@ -2,12 +2,14 @@
 title: 关于本站
 description: 这里记录我的想象和实验，一起来探索兴趣的边际。
 published: 2022/11/10
-modified: 2024/07/26
+modified: 2024/07/27
 slug: about-this-website
 ontop: true
 ---
 
 ## 第一章
+
+:MyAudio{:config='{"src":"https://zj.v.api.aa1.cn/api/qqmusic/demo.php?type=3&mid=000oiOiU4QPyN2&fid=0045TGG93Izdg4&t=3", "title":"怪天气", "coverImage": "https://y.qq.com/music/photo_new/T002R300x300M0000018fwZM24rErZ_1.jpg"}'}
 
 本站始于2017
 
@@ -16,7 +18,7 @@ ontop: true
 - 技术笔记
 - 课程笔记
 
-虽然本站建立已有5年，但这是广义上的，笔者是从2017年开始建立本站点-东生于的诗/东生于的小站。[timeline title="本站技术爆炸事件线" type="small"]  
+虽然本站建立已有7年，但这是广义上的，笔者是从2017年开始建立本站点-东生于的诗/东生于的小站。  
 ::Timeline
 :TimelineItem{:config='{"date": "2017", "tag": "低代码平台", "tagRight": true, "position": "start", "done": true}'}
 :TimelineItem{:config='{"date": "2017下半年", "tag": "wordpress+开源主题", "tagRight": false, "position": "middle", "done": true}'}
@@ -30,18 +32,33 @@ ontop: true
 
 这个网站的成长也见证了我的个人成长，一方面是年龄的增长，从初二到大三；
 
-~~我这一年（2022-2023）学习了许多编程的概念、技术和语言。~~
+实际上笔者的coding大部分集中在2022.09以后。
 
-~~笔者不太熟悉但已经提上学习日程的有：~~
-
-~~> Rust， C/C++~~
-
-实际上笔者的coding大部分集中在2022.09以后。~~，大部分不求甚解，希望以后能逐渐回归对源码本质的理解。~~
-
-如果你是从其他页面来的，并对我感兴趣，欢迎添加我的社交账号：<button class="btn btn-xs btn-info" color="info" icon="" url="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1546492103&website=www.oicqzone.com" type="">点我添加QQ</button>
-
-~~同时，本站的评论系统接入了邮件提醒功能，你的评论将同步发送至我的邮箱和微信，我的回复也将发送至您留下的邮箱。~~
+<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1546492103&website=www.oicqzone.com" class='btn btn-xs btn-accent'>点我添加QQ</a>
 
 ## 第二章
 
-迁移本站到文档驱动的Nuxt3是很艰难的工作，主要做了数据的迁移和改造，目录组件的实现，全站翻译的适配,以及一个完美的自动化构建流程。  
+迁移本站到文档驱动的Nuxt3是很艰难的工作。
+
+- 数据迁移改造
+- 部分功能的重新实现
+- 全站翻译的适配
+- 自动化构建
+
+## 鸣谢
+
+本站全部使用开源软件和工具包构建，感谢以下软件及工具包的供应商/开发者：
+
+<div class="grid grid-cols-4 grid-rows-3 h-24">
+    <img alt="Static Badge" src="https://img.shields.io/badge/nodejs-%20?style=flat&color=green" class="h-3/4">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Nuxt3%2Fcontent-%20?style=flat&color=purple">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Nuxt3%2Fcontent-zooper-%20?style=flat&color=purple" >
+    <img alt="Static Badge" src="https://img.shields.io/badge/vue3_audio_player-%20%20?style=flat&color=yellow" >
+    <img alt="Static Badge" src="https://img.shields.io/badge/daisyui-%20?style=flat&color=lightblue">
+    <img alt="Static Badge" src="https://img.shields.io/badge/tailwindcss-%20?style=plastic&color=blue">
+    <img alt="Static Badge" src="https://img.shields.io/badge/python-%20?style=plastic&color=slate">
+    <img alt="Static Badge" src="https://img.shields.io/badge/translate.js-%20?style=plastic&color=slate">
+    <img alt="Static Badge" src="https://img.shields.io/badge/vue-%20?style=for-the-badge&color=pink">
+    <img alt="Static Badge" src="https://img.shields.io/badge/vite-%20?style=for-the-badge&color=%20indigo">
+    <img alt="Static Badge" src="https://img.shields.io/badge/github--action-%20?style=flat-square" class="h-3/4">
+</div>

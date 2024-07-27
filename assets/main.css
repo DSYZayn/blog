@@ -1,6 +1,6 @@
 /* translate component global css */
 #translateSelectLanguage{
-    @apply select select-bordered w-28 h-10 scale-75 z-50  ;
+    @apply select select-bordered w-28 h-10 scale-75 z-50 absolute top-10 right-2 sm:relative sm:top-auto sm:right-auto;
 }
 /*css主要部分的样式*/
 /*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/

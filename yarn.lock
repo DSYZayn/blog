@@ -9198,6 +9198,11 @@ vue3-audio-player@^1.0.7:
     "@any-touch/pan" "^2.0.2"
     vue "^3.2.25"
 
+vue3-danmaku@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.npmmirror.com/vue3-danmaku/-/vue3-danmaku-1.6.1.tgz#efd129e0904a28074a41d3d9f99a841abf9f4fab"
+  integrity sha512-v7KqMV5WK3mqRSotSuJfnJldsIpilh72nLKKebWGCO7HM4k330QV1f4oje410GfwSx+SrJ+YLeTG8QLJYuKwYg==
+
 vue@^3.2.25, vue@^3.4.33:
   version "3.4.34"
   resolved "https://registry.npmmirror.com/vue/-/vue-3.4.34.tgz#19d9a82854d54c4506d1e2854c9c038ee430484a"
