@@ -32,8 +32,5 @@ jobs:
       - name: move new files to website directory
         run: mv ./.output/public/* /opt/1panel/apps/openresty/openresty/www/sites/zblog/index
 
-      - name: change owner
-        run: chown -R zayn:zayn /opt/1panel/apps/openresty/openresty/www/sites/zblog/index
-
       
 
