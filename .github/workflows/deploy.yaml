@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          github-server-url: 'git clone https://gitclone.com/github.com'
+          github-server-url: 'https://gitclone.com/github.com'
       - uses: actions/setup-node@v4
         with:
           node-version: 18
