@@ -36,5 +36,6 @@
     "vue-use-fixed-header": "^2.0.0",
     "vue3-audio-player": "^1.0.7",
     "vue3-danmaku": "^1.6.1"
-  }
+  },
+  "packageManager": "yarn@1.22.22"
 }
