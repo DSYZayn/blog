@@ -3,7 +3,7 @@ export default defineNuxtConfig({
     prerender: {
       autoSubfolderIndex: false
     },
-    preset: 'cloudflare-pages-static'
+    preset: 'cloudflare-pages'
   },
   devtools: {
     enabled: true,
