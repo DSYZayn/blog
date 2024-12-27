@@ -14,8 +14,6 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
-        with:
-          github-server-url: 'https://kkgithub.com'
       - uses: actions/setup-node@v4
         with:
           node-version: 18
@@ -33,9 +31,6 @@ jobs:
 
       - name: move new files to website directory
         run: mv ./.output/public/* /opt/1panel/apps/openresty/openresty/www/sites/zblog/index
-
-      - name: change owner
-        run: chown -R zayn:zayn /opt/1panel/apps/openresty/openresty/www/sites/zblog/index
 
       
 
