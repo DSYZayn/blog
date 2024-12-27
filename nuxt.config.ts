@@ -1,4 +1,9 @@
 export default defineNuxtConfig({
+  nitro:{
+    prerender: {
+      autoSubfolderIndex: false
+    }
+  },
   devtools: {
     enabled: true,
 
