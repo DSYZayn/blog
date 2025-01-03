@@ -4,6 +4,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "fix-memory-limit": "cross-env LIMIT=8192 increase-memory-limit",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -15,8 +16,8 @@
     "@nuxtjs/fontaine": "^0.4.1",
     "@nuxtjs/google-fonts": "3.1.1",
     "@nuxtjs/sitemap": "^5.3.5",
-    "@nuxtjs/tailwindcss": "^6.12.1",
-    "nuxt": "^3.12.4",
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "nuxt": "3.10",
     "nuxt-icon": "0.6.7",
     "prettier": "3.1.1",
     "prettier-plugin-tailwindcss": "0.5.9",
@@ -26,16 +27,16 @@
     "@giscus/vue": "^3.0.0",
     "@iconify-json/lucide": "1.1.145",
     "@nuxt/image": "1.1.0",
-    "@nuxt/ui": "^2.17.0",
+    "@nuxt/ui": "2.16.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "daisyui": "^4.12.10",
+    "dlx": "^0.2.1",
     "nuxt-content-twoslash": "^0.1.0",
     "package.json": "^2.0.1",
     "tailwindcss-animate": "^1.0.7",
     "vue-use-fixed-header": "^2.0.0",
     "vue3-audio-player": "^1.0.7",
     "vue3-danmaku": "^1.6.1"
-  },
-  "packageManager": "yarn@1.22.22"
+  }
 }

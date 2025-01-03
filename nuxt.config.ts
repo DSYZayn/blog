@@ -101,6 +101,5 @@ export default defineNuxtConfig({
       filename: "stats.html"
     }
   },
-
-  compatibilityDate: "2024-07-22",
+  compatibilityDate: "2025-01-04"
 });
