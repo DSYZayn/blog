@@ -2,7 +2,7 @@ import { seoData } from './data'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-09-30',
+  compatibilityDate: '2025-01-24',
 
   modules: [
     'nuxt-icon',
@@ -56,6 +56,7 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/', '/rss.xml'],
+      autoSubfolderIndex: false
     },
   },
 
