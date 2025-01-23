@@ -43,7 +43,7 @@ export const seoData = {
   twitterDescription: `Zayn's Blog, where I play around with Nuxt, Vue, and more and showcase my blog, resources, etc - Zayn Blog | Zayn's Blog`,
   image:
     'https://res.cloudinary.com/dmecmyphj/image/upload/v1673548905/nuxt-blog/cover_ntgs6u.webp',
-  mySite: 'https://www.dongsy.com.cn',
+  mySite: 'https://blog.dongsy.com.cn',
   twitterHandle: '',
   mailAddress: 'dong030202@gmail.com',
 }
