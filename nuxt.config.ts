@@ -56,7 +56,6 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/', '/rss.xml'],
-      autoSubfolderIndex: false
     },
   },
 
