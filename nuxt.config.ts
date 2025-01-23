@@ -67,13 +67,22 @@ export default defineNuxtConfig({
 
   content: {
     highlight: {
-      theme: 'monokai',
+      theme: 'dracula',
       langs: [
         'python',
         'c',
         'cpp',
         'c#',
-        'json', 'js', 'ts', 'html', 'css', 'vue', 'shell', 'mdc', 'md', 'yaml'
+        'json',
+        'js',
+        'ts',
+        'html',
+        'css',
+        'vue',
+        'shell',
+        'mdc',
+        'md',
+        'yaml'
       ]
     },
   },

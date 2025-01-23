@@ -117,27 +117,9 @@ defineOgImageComponent('Test', {
         :network="network"
         :styled="true"
         :label="true"
-        class="p-1"
         aria-label="Share with {network}"
+        class="p-1 border-2 border-[color:--color-brand] bg-transparent px-3 py-2 text-[color:--color-brand] hover:bg-[color:--color-brand] hover:text-white"
       />
     </div>
   </div>
 </template>
-<style>
-.share-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.social-share-button {
-  color: var(--color-brand);
-  border: 2px solid var(--color-brand);
-  padding: 0.5rem 0.75rem;
-}
-
-.social-share-button:hover {
-  background-color: var(--color-brand);
-  color: white;
-}
-</style>
