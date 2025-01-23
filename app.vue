@@ -1,5 +1,6 @@
 <script setup>
 import { siteMetaData } from './data'
+import { Analytics } from '@vercel/analytics/nuxt'
 
 useHead({
   htmlAttrs: {
