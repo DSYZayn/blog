@@ -23,10 +23,6 @@ function isActive(path: string) {
         </li>
       </ul>
       <ul class="flex items-center space-x-3 sm:space-x-6 text-sm sm:text-lg">
-        <li
-          id="transli"
-          class="text-sm w-0 invisible md:visible md:w-32 sm:text-2xl font-bold"
-        ></li>
         <li>
           <NuxtLink to="/blogs" :class="{ underline: isActive('/blogs') }"> Blogs </NuxtLink>
         </li>

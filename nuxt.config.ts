@@ -28,9 +28,6 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'zh',
       },
-      script: [
-        { src: 'https://cdn.staticfile.net/translate.js/3.5.1/translate.js' }
-      ]
     },
     pageTransition: { name: 'page', mode: 'out-in' },
     layoutTransition: { name: 'layout', mode: 'out-in' },
@@ -56,6 +53,7 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/', '/rss.xml'],
+      autoSubfolderIndex: false
     },
   },
 
