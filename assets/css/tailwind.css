@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.translateSelectLanguage {
+  @apply select select-ghost select-sm select-bordered w-32 h-10 text-sm;
+}

@@ -29,6 +29,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "@vueuse/core": "^10.9.0",
     "@vueuse/nuxt": "^10.9.0",
+    "daisyui": "^4.12.23",
     "eslint-config-prettier": "^9.1.0",
     "feed": "^4.2.2",
     "fuse.js": "^7.0.0",
@@ -38,5 +39,8 @@
     "prettier": "^3.3.3",
     "typescript": "^5.6.3"
   },
-  "packageManager": "pnpm@9.1.1+sha256.9551e803dcb7a1839fdf5416153a844060c7bce013218ce823410532504ac10b"
+  "packageManager": "pnpm@9.1.1+sha256.9551e803dcb7a1839fdf5416153a844060c7bce013218ce823410532504ac10b",
+  "dependencies": {
+    "mermaid": "^11.4.1"
+  }
 }

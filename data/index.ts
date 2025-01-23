@@ -1,11 +1,11 @@
 export const navbarData = {
-  homeTitle: "Riyad's Blog",
+  homeTitle: "Zayn's Blog",
 }
 
 export const footerData = {
-  author: 'Al Asad Nur Riyad',
+  author: 'Chen Xingyu',
   aboutAuthor:
-    'Hi! I am Riyad, a Tech enthusiast, problem solver and software engineer. Currently working at Appscode Inc.',
+    'Hi! I am Chen Xingyu, a Tech enthusiast, problem solver and software engineer. Currently finishing my bachelor\'s degree in Geographic Information Science.',
   authorInterest:
     "I have a fair amount of knowledge of Javascript, Typescript, VueJs, and Nuxt. If you have an interesting idea, either open source or paid let's connect.",
   aboutTheSite:
@@ -30,29 +30,26 @@ export const categoryPage = {
 }
 
 export const aboutPage = {
-  title: 'Al Asad Nur Riyad',
-  description: 'Software Engineer, Problem Solver, Web Enthusiast.',
+  title: 'Chen Xingyu',
+  description: 'Software Engineer, Problem Solver, Web Developer, ML Enthusiast.',
   aboutMe:
     "Hello, fellow human! I'm a software wizard who spends most of his day crafting code spells at @AppsCode in the Bytebuilders team. When I'm not crafting code, you can find me summoning solutions to problems on online judges. Just don't ask me to cast any love spells, my magic only works on machines!",
 }
 
 export const seoData = {
-  title: `Riyad's Blog | Riyads Blog`,
-  ogTitle: `Let's learn Javascript, Typescript, Vue, Nuxt, & Problem Solving - Riyads Blog | Riyad's Blog`,
-  description: `Hi I am Riyad. A Software Engineer at AppsCode, with over 2.5+ years experience in software development. - Riyads Blog | Riyad's Blog`,
-  twitterDescription: `Riyad's Blog, where I play around with Nuxt, Vue, and more and showcase my blog, resources, etc - Riyads Blog | Riyad's Blog`,
+  title: `Zayn's Blog | Zayn Blog`,
+  ogTitle: `Let's learn Javascript, Typescript, Vue, Nuxt, & Problem Solving - Zayn Blog | Zayn's Blog`,
+  description: `Hi I am Zayn. A student working on big geo data, with over 2.5+ years experience in software development. - Zayn Blog | Zayn's Blog`,
+  twitterDescription: `Zayn's Blog, where I play around with Nuxt, Vue, and more and showcase my blog, resources, etc - Zayn Blog | Zayn's Blog`,
   image:
     'https://res.cloudinary.com/dmecmyphj/image/upload/v1673548905/nuxt-blog/cover_ntgs6u.webp',
-  mySite: 'https://blog-nurriyad.vercel.app',
-  twitterHandle: '@qdnvubp',
-  mailAddress: 'asadnurriyad@gmail.com',
+  mySite: 'https://www.dongsy.com.cn',
+  twitterHandle: '',
+  mailAddress: 'dong030202@gmail.com',
 }
 
 export const socialLinks = {
-  githubLink: 'https://github.com/nurRiyad',
-  linkedinLink: 'https://www.linkedin.com/in/nur-riyad/',
-  twitterLink: 'https://twitter.com/qdnvubp',
-  stackoverflowLink: 'https://stackoverflow.com/users/16781395/nur-riyad',
+  githubLink: 'https://github.com/DSYZayn',
 }
 
 export const siteMetaData = [

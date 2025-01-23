@@ -19,13 +19,18 @@ export default defineNuxtConfig({
     '@formkit/auto-animate',
     '@stefanobartoletti/nuxt-social-share',
   ],
-
   app: {
     head: {
       charset: 'utf-16',
       viewport: 'width=device-width,initial-scale=1',
       title: seoData.title,
       titleTemplate: `%s - ${seoData.title}`,
+      htmlAttrs: {
+        lang: 'zh',
+      },
+      script: [
+        { src: 'https://cdn.staticfile.net/translate.js/3.5.1/translate.js' }
+      ]
     },
     pageTransition: { name: 'page', mode: 'out-in' },
     layoutTransition: { name: 'layout', mode: 'out-in' },
@@ -62,7 +67,15 @@ export default defineNuxtConfig({
 
   content: {
     highlight: {
-      theme: 'dracula',
+      theme: 'monokai',
+      langs: [
+        'python',
+        'c',
+        'cpp',
+        'c#',
+        'json', 'js', 'ts', 'html', 'css', 'vue', 'shell', 'mdc', 'md', 'yaml'
+      ]
     },
   },
+
 })
