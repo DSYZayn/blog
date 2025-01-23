@@ -19,6 +19,9 @@ export default defineNuxtConfig({
     '@formkit/auto-animate',
     '@stefanobartoletti/nuxt-social-share',
   ],
+  socialShare: {
+    baseUrl: 'https://blog.dongsy.com.cn'
+  },
   app: {
     head: {
       charset: 'utf-16',

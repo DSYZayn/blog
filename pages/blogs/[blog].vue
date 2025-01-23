@@ -112,7 +112,7 @@ defineOgImageComponent('Test', {
 
     <div class="flex flex-row flex-wrap md:flex-nowrap mt-10 gap-2">
       <SocialShare
-        v-for="network in ['facebook', 'twitter', 'linkedin', 'email']"
+        v-for="network in ['facebook', 'twitter', 'linkedin', 'email', 'telegram']"
         :key="network"
         :network="network"
         :styled="true"
@@ -123,3 +123,21 @@ defineOgImageComponent('Test', {
     </div>
   </div>
 </template>
+<style>
+.share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.social-share-button {
+  color: var(--color-brand);
+  border: 2px solid var(--color-brand);
+  padding: 0.5rem 0.75rem;
+}
+
+.social-share-button:hover {
+  background-color: var(--color-brand);
+  color: white;
+}
+</style>
