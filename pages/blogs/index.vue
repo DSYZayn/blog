@@ -2,7 +2,7 @@
 import Fuse from 'fuse.js'
 
 const { data } = await useAsyncData('home', () =>
-  queryCollection('blogs').order('id', 'DESC').all(),
+  queryCollection('blogs').order('ontop', 'DESC').order('id', 'DESC').all(),
 )
 
 const elementPerPage = ref(5)
@@ -27,7 +27,9 @@ const formattedData = computed(() => {
     }) || []
   )
 })
-
+watchEffect(() => {
+  console.log(formattedData.value)
+})
 const fuse = computed(() => {
   return new Fuse(formattedData.value, {
     keys: ['title', 'description'],

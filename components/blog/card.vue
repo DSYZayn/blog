@@ -9,6 +9,7 @@ interface Props {
   ogImage: string
   tags: Array<string>
   published: boolean
+  ontop: boolean
 }
 
 withDefaults(defineProps<Props>(), {
@@ -21,6 +22,7 @@ withDefaults(defineProps<Props>(), {
   ogImage: '/blogs-img/blog.jpg',
   tags: () => [],
   published: false,
+  ontop: false,
 })
 </script>
 
@@ -40,6 +42,9 @@ withDefaults(defineProps<Props>(), {
           <div class="flex items-center">
             <LogoDate />
             {{ date }}
+            <div v-if="ontop" class="badge badge-error rounded-md badge-outline font-sans ml-3">
+              置顶
+            </div>
           </div>
           <div class="flex items-center gap-1 flex-wrap">
             <LogoTag />

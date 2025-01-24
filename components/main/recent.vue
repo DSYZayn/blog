@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 // Get Last 6 Publish Post from the content/blog directory
 const { data } = await useAsyncData('recent-post', () => {
-  return queryCollection('blogs').limit(3).order('id', 'DESC').all()
+  return queryCollection('blogs').order('ontop', 'DESC').limit(3).order('id', 'DESC').all()
 })
 
 const formattedData = computed(() => {
@@ -16,6 +16,7 @@ const formattedData = computed(() => {
       date: articles.date || 'not-date-available',
       tags: articles.tags || [],
       published: articles.published || false,
+      ontop: articles.ontop || false,
     }
   })
 })
@@ -51,6 +52,7 @@ useHead({
           :og-image="post.ogImage"
           :tags="post.tags"
           :published="post.published"
+          :ontop="post.ontop"
         />
       </template>
       <template v-if="data?.length === 0">

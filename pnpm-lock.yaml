@@ -14,6 +14,9 @@ importers:
       mermaid:
         specifier: ^11.4.1
         version: 11.4.1
+      vue3-audio-player:
+        specifier: ^1.0.7
+        version: 1.0.7(typescript@5.7.3)
     devDependencies:
       '@formkit/auto-animate':
         specifier: ^0.8.2
@@ -94,6 +97,21 @@ packages:
 
   '@antfu/utils@0.7.10':
     resolution: {integrity: sha512-+562v9k4aI80m1+VuMHehNJWLOFjBnXn3tdOitzD0il5b7smkSBal4+a3oKiQTbrwMmN/TBUMDvbdoWDehgOww==}
+
+  '@any-touch/compute@2.2.0':
+    resolution: {integrity: sha512-hrw74b/cVT8SmiKFLValmllajw+bBvTa5iUwIXFVVIJM9T3tO15zZC2QbjVz8Uwi6XjH932RDUILGMs2TNvyQg==}
+
+  '@any-touch/core@2.2.0':
+    resolution: {integrity: sha512-xMHAA5aLCatFto+4fQWyE4YAsyN/LsXS4mnYuVpqFYoNz8dl5FsB/TIyb9JrqMKLYMxxcZ9joqR8gDprH1lwBw==}
+
+  '@any-touch/pan@2.2.0':
+    resolution: {integrity: sha512-uMkCHbTm5qWji/FvhumP9n1ZCkPU7hy864g+ZhoWZ0OWAmn7s/TKRo4UqPBfqEPUMV6obGZvatrrgBLWT6J57w==}
+
+  '@any-touch/shared@2.2.0':
+    resolution: {integrity: sha512-2n1zWaATi/3osr/dkIUq5O7aSffKUsTM4DsIbPMW1VEO77v/rX2HkLoxt2Djzj5eCGh7An55Vw8NeA33kTTSRA==}
+
+  '@any-touch/vector@2.2.0':
+    resolution: {integrity: sha512-t7pGYegIDCJl+swwsohZHZKmF71ZMt+hjwVEyhaEP6nQhcx6S7zulxnRxNp1t8s+c/JdK02Q89HnzQ4Ukg4+IA==}
 
   '@apidevtools/json-schema-ref-parser@11.7.3':
     resolution: {integrity: sha512-WApSdLdXEBb/1FUPca2lteASewEfpjEYJ8oXZP+0gExK5qSfsEKBKcA+WjY6Q4wvXwyv0+W6Kvc372pSceib9w==}
@@ -1790,6 +1808,9 @@ packages:
   ansi-styles@6.2.1:
     resolution: {integrity: sha512-bN798gFfQX+viw3R7yrGWRqnrN2oRkEkUjjl4JNn4E8GxxbjtG3FbrEIIY3l8/hrwUwIeCZvi4QuOTP4MErVug==}
     engines: {node: '>=12'}
+
+  any-event@2.2.0:
+    resolution: {integrity: sha512-PB4sEiVUjL+5mLmwlAGYdI5/1ouckapxS6+RPIvrGXv9XTMav7M3k3rR/f9fwAR+e2608CTR3FOR5HrOEYTtKA==}
 
   any-promise@1.3.0:
     resolution: {integrity: sha512-7UvmKalWRt1wgjL1RrGxoSJW/0QZFIegpeGvZG9kjp8vrRu55XTHbwnqq2GpXm9uLbcuhxm3IqX9OB4MZR1b2A==}
@@ -5774,6 +5795,9 @@ packages:
     peerDependencies:
       vue: ^3.2.0
 
+  vue3-audio-player@1.0.7:
+    resolution: {integrity: sha512-7uGyCDzJaEIN4VV7Sf/s/nOUcO7SV0mRNFjf7dOAG+clVGF8rcL8Arp0vXGwmx4jzxqwOcLhl3C6TK/r9eoI/A==}
+
   vue@3.5.13:
     resolution: {integrity: sha512-wmeiSMxkZCSc+PM2w2VRsOYAZC8GdipNFRTsLSfodVqI9mbejKeXEGr8SckuLnrQPGe3oJN5c3K0vpoU9q/wCQ==}
     peerDependencies:
@@ -5956,6 +5980,28 @@ snapshots:
       tinyexec: 0.3.2
 
   '@antfu/utils@0.7.10': {}
+
+  '@any-touch/compute@2.2.0':
+    dependencies:
+      '@any-touch/shared': 2.2.0
+      '@any-touch/vector': 2.2.0
+      tslib: 2.8.1
+
+  '@any-touch/core@2.2.0':
+    dependencies:
+      '@any-touch/shared': 2.2.0
+      any-event: 2.2.0
+
+  '@any-touch/pan@2.2.0':
+    dependencies:
+      '@any-touch/compute': 2.2.0
+      '@any-touch/shared': 2.2.0
+
+  '@any-touch/shared@2.2.0': {}
+
+  '@any-touch/vector@2.2.0':
+    dependencies:
+      '@any-touch/shared': 2.2.0
 
   '@apidevtools/json-schema-ref-parser@11.7.3':
     dependencies:
@@ -8065,6 +8111,10 @@ snapshots:
       color-convert: 2.0.1
 
   ansi-styles@6.2.1: {}
+
+  any-event@2.2.0:
+    dependencies:
+      tslib: 2.8.1
 
   any-promise@1.3.0: {}
 
@@ -12922,6 +12972,14 @@ snapshots:
     dependencies:
       '@vue/devtools-api': 6.6.4
       vue: 3.5.13(typescript@5.7.3)
+
+  vue3-audio-player@1.0.7(typescript@5.7.3):
+    dependencies:
+      '@any-touch/core': 2.2.0
+      '@any-touch/pan': 2.2.0
+      vue: 3.5.13(typescript@5.7.3)
+    transitivePeerDependencies:
+      - typescript
 
   vue@3.5.13(typescript@5.7.3):
     dependencies:
