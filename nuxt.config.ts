@@ -12,16 +12,11 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/content',
     'nuxt-og-image',
-    '@nuxtjs/robots',
-    '@nuxtjs/sitemap',
     '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss',
     '@formkit/auto-animate',
     '@stefanobartoletti/nuxt-social-share',
   ],
-  socialShare: {
-    baseUrl: 'https://blog.dongsy.com.cn'
-  },
   app: {
     head: {
       charset: 'utf-16',
@@ -36,9 +31,6 @@ export default defineNuxtConfig({
     layoutTransition: { name: 'layout', mode: 'out-in' },
   },
 
-  sitemap: {
-    strictNuxtContentPaths: true,
-  },
 
   site: {
     url: seoData.mySite,
@@ -49,7 +41,7 @@ export default defineNuxtConfig({
   },
 
   typescript: {
-    strict: true,
+    strict: false,
   },
 
   nitro: {
@@ -66,25 +58,31 @@ export default defineNuxtConfig({
   },
 
   content: {
-    highlight: {
-      theme: 'dracula',
-      langs: [
-        'python',
-        'c',
-        'cpp',
-        'c#',
-        'json',
-        'js',
-        'ts',
-        'html',
-        'css',
-        'vue',
-        'shell',
-        'mdc',
-        'md',
-        'yaml'
-      ]
+    preview: {
+      api: 'https://api.nuxt.studio'
     },
-  },
+    build: {
+      markdown: {
+        highlight: {
+          theme: 'dracula',
+          langs: [
+            'python',
+            'c',
+            'cpp',
+            'json',
+            'js',
+            'ts',
+            'html',
+            'css',
+            'vue',
+            'shell',
+            'mdc',
+            'md',
+            'yaml'
+          ]
+        },
+      }
+    },
 
+  },
 })

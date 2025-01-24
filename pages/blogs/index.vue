@@ -1,7 +1,9 @@
 <script lang="ts" setup>
 import Fuse from 'fuse.js'
 
-const { data } = await useAsyncData('home', () => queryContent('/blogs').sort({ _id: -1 }).find())
+const { data } = await useAsyncData('home', () =>
+  queryCollection('blogs').order('id', 'DESC').all(),
+)
 
 const elementPerPage = ref(5)
 const pageNumber = ref(1)
@@ -11,7 +13,7 @@ const formattedData = computed(() => {
   return (
     data.value?.map((articles) => {
       return {
-        path: articles._path,
+        path: articles.path,
         title: articles.title || 'no-title available',
         description: articles.description || 'no-description available',
         image: articles.image || '/not-found.jpg',
@@ -20,6 +22,7 @@ const formattedData = computed(() => {
         date: articles.date || 'not-date-available',
         tags: articles.tags || [],
         published: articles.published || false,
+        ontop: articles.ontop || false,
       }
     }) || []
   )
@@ -108,6 +111,7 @@ defineOgImage({
           :og-image="post.ogImage"
           :tags="post.tags"
           :published="post.published"
+          :ontop="post.ontop"
         />
       </template>
 
