@@ -1,3 +1,6 @@
+<script setup lang="ts">
+import { SpeedInsights } from '@vercel/speed-insights/nuxt'
+</script>
 <template>
   <div class="gd-container font-spacegrotesk">
     <header class="fixed w-full bg-[#F1F2F4] dark:bg-slate-950 z-10">
@@ -10,6 +13,7 @@
     <footer>
       <MainFooter />
     </footer>
+    <SpeedInsights />
   </div>
 </template>
 
