@@ -27,9 +27,6 @@ const formattedData = computed(() => {
     }) || []
   )
 })
-watchEffect(() => {
-  console.log(formattedData.value)
-})
 const fuse = computed(() => {
   return new Fuse(formattedData.value, {
     keys: ['title', 'description'],

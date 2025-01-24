@@ -50,7 +50,11 @@ export default defineNuxtConfig({
       routes: ['/', '/rss.xml'],
     },
   },
-
+  routeRules: {
+    '/blogs/about-this-website': {
+      prerender: false
+    }
+  },
   colorMode: {
     classSuffix: '',
     preference: 'dark',
