@@ -33,7 +33,7 @@ export const aboutPage = {
   title: 'Chen Xingyu',
   description: 'Software Engineer, Problem Solver, Web Developer, ML Enthusiast.',
   aboutMe:
-    "Hello, fellow human! I'm a software wizard who spends most of his day crafting code spells at @AppsCode in the Bytebuilders team. When I'm not crafting code, you can find me summoning solutions to problems on online judges. Just don't ask me to cast any love spells, my magic only works on machines!",
+    "Hi! I'm an undergraduate student in the field of Geographic Information Science. I have a fair amount of knowledge of web, hpc, maintenance and machine learning. If you have an interesting idea, either open source or paid let's connect.",
 }
 
 export const seoData = {

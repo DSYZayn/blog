@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://blog.nurriyad.com" target="_blank">
+  <a href="https://blog.dongsy.com.cn" target="_blank">
     <img  src="./assets/images/dark.png">
   </a>
 </p>
@@ -35,21 +35,6 @@ Nuxt Blog built with [Nuxt3](https://nuxt.com), [Nuxt-Content2](https://content.
 - Voilà! You've got a personalized blog site!
 
 ## Preview
-
-<p align="center">
-  <a href="https://blog.nurriyad.com" target="_blank">
-    <img width="1090" src="./assets/images/preview1.png">
-    <img width="1090" src="./assets/images/preview2.png">
-    <img width="1090" src="./assets/images/preview3.png">
-    <img width="1090" src="./assets/images/preview4.png">
-    <br>
-    Live Demo
-  </a>
-</p>
-
-## Demo
-
-https://blog.nurriyad.com
 
 > Hosted on [Vercel](https://vercel.com/): `npm run build`
 
