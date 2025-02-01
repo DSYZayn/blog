@@ -10,6 +10,8 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/eslint',
     '@vueuse/nuxt',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap',
     '@nuxt/content',
     'nuxt-og-image',
     '@nuxtjs/color-mode',
@@ -34,6 +36,7 @@ export default defineNuxtConfig({
 
   site: {
     url: seoData.mySite,
+    name: seoData.title,
     identity: {
       type: 'Person',
     },
@@ -82,7 +85,9 @@ export default defineNuxtConfig({
             'shell',
             'mdc',
             'md',
-            'yaml'
+            'yaml',
+            'sh',
+            'bash'
           ]
         },
       }
