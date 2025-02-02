@@ -41,7 +41,7 @@ const copy = (_e: MouseEvent) => {
   <div
     class="tooltip tooltip-left tooltip-accent tooltip-xs"
     :class="{ 'tooltip-open': show }"
-    data-tip="Clip to clipboard"
+    data-tip="Copy to clipboard"
   >
     <button
       ref="copyButtonRef"

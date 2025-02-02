@@ -12,7 +12,9 @@
     <img width="200" src="./assets/images/logo.png">
 </p>
 
-Nuxt Blog built with [Nuxt3](https://nuxt.com), [Nuxt-Content2](https://content.nuxtjs.org/blog/announcing-v2/), [Vue3](https://vuejs.org) & [TailwindCss](https://tailwindcss.com/)
+Nuxt Blog built with [Nuxt3](https://nuxt.com), [Nuxt-Content3](https://content.nuxt.com/blog/v3), [Vue3](https://vuejs.org) & [TailwindCss](https://tailwindcss.com/) & [Daisyui](https://daisyui.com/)
+
+> Mod from
 
 ## Features
 
@@ -26,6 +28,8 @@ Nuxt Blog built with [Nuxt3](https://nuxt.com), [Nuxt-Content2](https://content.
 - Dark and light mode
 - Server Side Rendered(SSR) with Nuxt3
 - RSS feed
+- Pin function
+- Custom Code Block
 
 ## How to Make This Blog Template Yours in 5 Minutes
 
@@ -36,23 +40,23 @@ Nuxt Blog built with [Nuxt3](https://nuxt.com), [Nuxt-Content2](https://content.
 
 ## Preview
 
-> Hosted on [Vercel](https://vercel.com/): `npm run build`
+> Hosted on [Vercel](https://vercel.com/): `pnpm run build`
 
 ## Build Setup
 
-**Requires Node.js 16+**
+### Requires Node.js 16+
 
 ```bash
 # install dependencies
-yarn install
+pnpm install
 
 # serve in dev mode, with hot reload at localhost:5173
-yarn run dev
+pnpm run dev
 
 # build for production
-yarn run build
+pnpm run build
 
 # serve in production mode
-yarn run  preview
+pnpm run  preview
 
 ```
