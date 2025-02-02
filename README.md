@@ -14,7 +14,7 @@
 
 Nuxt Blog built with [Nuxt3](https://nuxt.com), [Nuxt-Content3](https://content.nuxt.com/blog/v3), [Vue3](https://vuejs.org) & [TailwindCss](https://tailwindcss.com/) & [Daisyui](https://daisyui.com/)
 
-> Mod from
+> Mod from [nurRiyad/nuxt-blog](https://github.com/nurRiyad/nuxt-blog)
 
 ## Features
 
